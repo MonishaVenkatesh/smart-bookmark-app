@@ -92,15 +92,24 @@ export default function Home() {
     setBookmarks([]);
   };
 
-  const handleAddBookmark = async (title: string, url: string) => {
-    if (!user) return;
+  // const handleAddBookmark = async (title: string, url: string) => {
+  //   if (!user) return;
     
-    const newBookmark = await addBookmark(user.id, title, url);
-    if (newBookmark) {
-      // Optimistically add to UI (will be confirmed by real-time update)
-      setBookmarks((prev) => [newBookmark, ...prev]);
-    }
-  };
+  //   const newBookmark = await addBookmark(user.id, title, url);
+  //   if (newBookmark) {
+  //     // Optimistically add to UI (will be confirmed by real-time update)
+  //     setBookmarks((prev) => [newBookmark, ...prev]);
+  //   }
+  // };
+
+  const handleAddBookmark = async (title: string, url: string) => {
+  if (!user) return;
+
+  // Just insert into DB
+  // Realtime subscription will update UI automatically
+  await addBookmark(user.id, title, url);
+};
+
 
   const handleDeleteBookmark = async (id: string) => {
     const success = await deleteBookmark(id);
