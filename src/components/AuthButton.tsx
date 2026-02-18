@@ -17,7 +17,7 @@ export default function AuthButton({ user, onSignIn, onSignOut }: AuthButtonProp
       >
         <svg
           className="w-4 h-4 mr-2"
-          fill="none"
+          fill="urrentColor"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >

@@ -251,9 +251,9 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key`}
         )}
 
         {/* Footer */}
-        <footer className="mt-12 text-center text-gray-500 text-sm">
+        {/* <footer className="mt-12 text-center text-gray-500 text-sm">
           <p>Built with Next.js, Supabase, and Tailwind CSS</p>
-        </footer>
+        </footer> */}
       </div>
     </main>
   );
